@@ -1,0 +1,13 @@
+scikit-learn
+pandas
+ipykernel
+numpy
+matplotlib
+pandas
+seaborn
+requests
+bs4
+Flask
+imblearn
+openpyxl
+statsmodels

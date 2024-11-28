@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algerian Fire Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 600px;
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Algerian Fire Prediction</h2>
+        <form action="{{ url_for("predict_datapoint") }}" method="POST">
+            <label for="Temperature">Enter the Temperature:</label>
+            <input type="text" name="Temperature" placeholder="Temperature" required>
+
+            <label for="RH">Enter the RH:</label>
+            <input type="text" name="RH" placeholder="RH" required>
+
+            <label for="Ws">Enter the Ws:</label>
+            <input type="text" name="Ws" placeholder="Ws" required>
+
+            <label for="Rain">Enter the Rain:</label>
+            <input type="text" name="Rain" placeholder="Rain" required>
+
+            <label for="FFMC">Enter the FFMC:</label>
+            <input type="text" name="FFMC" placeholder="FFMC" required>
+
+            <label for="DMC">Enter the DMC:</label>
+            <input type="text" name="DMC" placeholder="DMC" required>
+
+            <label for="ISI">Enter the ISI:</label>
+            <input type="text" name="ISI" placeholder="ISI" required>
+
+            <label for="Classes">Enter the Classes:</label>
+            <input type="text" name="Classes" placeholder="0: not fire, 1: fire " required>
+
+            <label for="Region">Enter the Region:</label>
+            <input type="text" name="Region" placeholder="0: Bejaia, 1: Sidi-Bel Abbes " required>
+            
+
+            <button type="submit">Submit</button>
+        </form>
+        <h2>The Predicted FWI is: {{ result }}</h2>
+    </div>
+</body>
+</html>
