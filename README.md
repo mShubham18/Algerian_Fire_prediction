@@ -28,19 +28,26 @@ The **Algerian Fire Prediction** project is a Flask-based web application that p
 
 Before running the project, ensure the following are installed:
 
-- Python 3.10+
-- Flask
 - scikit-learn
 - pandas
+- ipykernel
 - numpy
-- pickle
+- matplotlib
+- pandas
+- seaborn
+- requests
+- bs4
+- Flask
+- imblearn
+- openpyxl
+- statsmodels
 
 ## Installation and Setup
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/mShubham18/Algerian-Fire-Prediction
-   cd Algerian-Fire-Prediction
+   git clone https://github.com/mShubham18/Algerian_Fire_prediction
+   cd Algerian_Fire_prediction
 
 2. **Install the required modules:**
     ```bash
